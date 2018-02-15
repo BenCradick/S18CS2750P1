@@ -7,3 +7,7 @@ Did the whole script without using a while loop, opted to recursively call the f
 I'd imagine most of these look alike, theres not all that much that can be done with this.
 
 #Part 3
+Nothing special here.
+
+#Part 4
+Makes sure data is presented in nice even columns.

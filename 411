@@ -1,23 +1,33 @@
 #!/usr/bin/bash
+#Ben Cradick
+#CS 2750
+#Project 1
 
+#search phonebook for argument print entry if found
 if  ( grep  "$*" < phone-book); then 
-echo -n
+    echo -n
 
+#if not found inform them as such
 else 
-echo "Entered name was not found."
+    echo "Entered name was not found."
+
 fi
+#prompt user for input 
 echo "Would you like to:"
 echo "1. Search for a different name."
 echo "2. Terminate program"
 
-
+#read user input
 read input
 if [ $input == 1 ]; then
-echo "Please enter new search term."
-read term
-bash $0 $term
+    echo "Please enter new search term."
+    read term
+    #search new term by recursively calling this script and starting over again
+    bash $0 $term
+
+#otherwise end the program
 else
-echo "Terminating program."
+    echo "Terminating program."
 
 fi
 
